@@ -146,6 +146,25 @@ end
 
 
 
+def num_points_scored (player_name)
+  game_hash.values.each do |team|  
+    team[:players].each do |player|
+      return player[:points] if player.has_value?(player_name)
+    end
+  end
+end
+
+
+def shoe_size (player_name)
+  game_hash.values.each do |team_info|  
+    team_info[:players].each do |player|
+      return player[:shoe] if player.has_value?(player_name)
+    end
+ end
+end
+
+
+
 def team_colors(team)
 
   game_hash.values.each do |team_info|
@@ -154,6 +173,16 @@ def team_colors(team)
     end
   end
 end
+
+
+def player_numbers (team_name)
+end
+
+def player_stats (player_name)
+
+end
+
+def big_shoe_rebounds 
 
 
 def player_numbers (team_name)

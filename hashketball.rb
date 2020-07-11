@@ -152,7 +152,9 @@ def team_colors(team)
   end
 end
 
-def team_names()
+def team_names
+  
+  :game_hash [home][away] team team_name
 end
 
 def player_numbers (team_name)

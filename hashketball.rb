@@ -1,3 +1,4 @@
+require './hashketball.rb'
 # Write your code below game_hash
 def game_hash
   {
@@ -125,5 +126,44 @@ def game_hash
     }
   }
 end
+
+def num_points_scored (player_name)
+  game_hash.values.each do |team|  
+    team[:players].each do |player|
+      return player[:points] if player.has_value?(player_name)
+    end
+  end
+end
+
+
+def shoe_size (player_name)
+  game_hash.values.each do |team_info|  
+    team_info[:players].each do |player|
+      return player[:shoe] if player.has_value?(player_name)
+    end
+ end
+end
+
+
+
+def team_colors(team)
+
+  game_hash.values.each do |team_info|
+    if team_info.has_value?(team)
+      return team_info[:colors].map(&:capitalize)
+    end
+  end
+end
+
+
+def player_numbers (team_name)
+end
+
+def player_stats (player_name)
+
+end
+
+def big_shoe_rebounds 
+
 
 # Write code here
